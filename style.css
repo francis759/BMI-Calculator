@@ -8,7 +8,7 @@
 body{
     height:100vh;
     width: 100%;
-    background: linear-gradient(135deg, #0083B0, #00B4DB, #ccc) no-repeat;
+    background: linear-gradient(135deg, #0083B0, #00B4DB, #fff)no-repeat center/cover;
 }
 .body{
     margin:120px auto;
@@ -26,16 +26,18 @@ body{
 }
 .body h3{
     margin-top: 1rem;
+    
     font-weight: 100;
 }
 .body input{
     border: 1px solid rgb(22, 134, 209, 0.5);
     width: 100%;
-    padding-left: 10px;
+    outline: none;
+    padding: 1rem;
     font-size: medium;
     font-weight: 200;
     display: flex;
-    height: 35px;
+    height: 40px;
     margin: 10px 0;
     border-radius: 4px;
 }
@@ -67,5 +69,5 @@ hr{
   }
 .bmi-guide h3{
     margin: .5rem;
-    font-size: 18px;
+    font-size: 17px;
 }
