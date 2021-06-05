@@ -4,7 +4,6 @@ function calculateBMI(){
 	let height = document.getElementById("heightinput").value;
 	//
 	let output = document.getElementById("bmivalue-holder");
-	
 	//
 	try {
 		if((isNaN(weight) && isNaN(height)) || (weight==="" && isNaN(height)) ||
@@ -18,21 +17,26 @@ function calculateBMI(){
 			throw 'Height is missing or invalid'
 		}
 		let bmiValue = (weight/Math.pow(height,2)).toFixed(1);
-
+		let str = ""
 		if(bmiValue < 18.5){
-			output.innerHTML="Your BMI is "+bmiValue +", so you are underweight."
+			str = "underweight";
+			output.innerHTML="Your BMI is "+ bmiValue +", so you are\xa0" + str.bold();
 		}
 		else if(bmiValue>= 18.5 && bmiValue<=24.9){
-			output.innerHTML = "Your BMI is "+bmiValue +", so you have a normal weight."
+			str = "normal weight";
+			output.innerHTML = "Your BMI is "+bmiValue +", so you have a\xa0" + str.bold();
 		}
 		else if(bmiValue>= 25 && bmiValue <=29.9){
-			output.innerHTML = "Your BMI is "+bmiValue +", so you are overweight."
+			str = "overweight";
+			output.innerHTML = "Your BMI is "+bmiValue +", so you are\xa0" + str.bold();
 		}
-		else if(bmiValue>= 25 && bmiValue <=29.9){
-			output.innerHTML = "Your BMI is "+bmiValue +", so you are obese."
+		else if(bmiValue>= 30.0 && bmiValue <=34.9){
+			str = "obese";
+			output.innerHTML = "Your BMI is "+bmiValue +", so you are\xa0" + str.bold();
 		}
 		else{
-			output.innerHTML = "Your BMI is "+bmiValue +", so you are extremely obese."
+			str = "extremely obese";
+			output.innerHTML = "Your BMI is "+bmiValue +", so you are\xa0" + str.bold();
 		}
 		
 	} catch (error) {
