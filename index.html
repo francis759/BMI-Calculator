@@ -8,7 +8,6 @@
     <title>BMI Calculator</title>
 </head>
 <body>
-    <script src="script.js"></script>
     <div class="body">
         <h2>BMI Calculator</h2>
         <hr>
@@ -17,7 +16,7 @@
         <h3>Height (m)</h3>
         <input id="heightinput" type="text">
         <div class="btn">
-            <button onclick="calculateBMI()">Calculate</button>
+            <button id="calculate-btn">Calculate</button>
         </div>
         <p id="bmivalue-holder"></p>
         <h3>BMI Guide</h3>
@@ -35,5 +34,6 @@
             <div class="grid-item">34.9 and Above</div>
             <div class="grid-item">Extremely Obese</div>
         </div>
+        <script src="script.js"></script>
 </body>
 </html>
